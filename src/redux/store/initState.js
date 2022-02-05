@@ -4,27 +4,27 @@ export const initState={
     list:[
         {
             id:"fgdshjlsa",
-            name:"Luke Jones",
+            name:"Henry Jones",
             descr:"The world's greatest rebel, and part time spaceman."
         },
         {
             id:"asdhakjjasd",
-            name:"Kat Kirchner",
+            name:"Kit Katcher",
             descr:"The dark Shaman who cuddles her corgi while watching anime."
         },
         {
             id:"lkssnsslfdkgjr",
-            name:"Noah Furniss",
-            descr:"Rips and Tears in Doom and is still salty about Elliott Jordan."
+            name:"Nolan Furn",
+            descr:"Rips and Tears in Doom and is still salty about EJ."
         },
         {
             id:"asdasdfdadfadsfas",
-            name:"Maria Leichty",
+            name:"Mary Lights",
             descr:"She really likes Star Wars, and Villainous. Sometimes we wonder if she can make up her mind"
         },
         {
             id:"klsjdfhlskjfaadsf",
-            name:"Geoff Mastbrook",
+            name:"Bubba Matchbox",
             descr:"He rules the Star Realms and is the precursor legacy."
         },
 
