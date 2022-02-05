@@ -4,4 +4,28 @@
 
 h1,h2,h3,h4,h5,h6{
   margin-bottom: 16px;
+  color: @fl1;
+}
+
+html{
+  background-color: @backgroundLight;
+}
+
+#root{
+  box-sizing: border-box;
+  padding-top: @navHeightMobile;
+
+  @media screen and (min-width: @mb2){
+    padding-top: @navHeight;
+  }
+
+}
+
+#App{
+  .pad(8px 0 0 0);
+}
+
+a{
+  text-decoration: none;
+  color: @fl2;
 }

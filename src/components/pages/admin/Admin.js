@@ -31,13 +31,6 @@ function Admin(){
         })
     }
 
-    const specialValue = (prop, val)=>{
-        setForm({
-            ...form,
-            [prop]:val
-        })
-    }
-
     const onSubmit = ()=>{
         if(form.name.replace(/\s/g, '').length>0&&form.descr.replace(/\s/g, '').length>0){
             const newPerson={
