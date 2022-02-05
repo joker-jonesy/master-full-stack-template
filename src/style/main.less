@@ -4,16 +4,14 @@
 
 h1,h2,h3,h4,h5,h6{
   margin-bottom: 16px;
-  color: @fl1;
 }
 
-html{
-  background-color: @backgroundLight;
-}
 
 #root{
   box-sizing: border-box;
   padding-top: @navHeightMobile;
+  min-height: 100vh;
+  position: relative;
 
   @media screen and (min-width: @mb2){
     padding-top: @navHeight;
@@ -23,9 +21,55 @@ html{
 
 #App{
   .pad(8px 0 0 0);
+  width: 100%;
+  .flexInit();
+  justify-content: center;
+  padding-bottom: 200px;
+  min-height: 100vh;
+}
+
+#App.light{
+  background-color: @backgroundLight;
+  color: @fl1;
+}
+
+#App.dark{
+  background-color: @backgroundDark;
+  color: @fd1;
 }
 
 a{
   text-decoration: none;
-  color: @fl2;
+}
+
+.button{
+  height: 40px;
+  min-width: 60px;
+  max-width: 100px;
+  .pad(4px);
+  border-radius: 10px;
+  .flexInit();
+  .flexCenterRow();
+  cursor: pointer;
+  transition: 0.125s;
+
+  &.light{
+    background-color: @minorl;
+    color: @fl3;
+    &:hover{
+      background-color: @tintl;
+    }
+  }
+
+  &.dark{
+    background-color: @minord;
+    color: @fl3;
+    &:hover{
+      background-color: @tintd;
+    }
+  }
+}
+
+.page-wrapper{
+  max-width: @mb2;
 }

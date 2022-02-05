@@ -13,6 +13,12 @@ const rootReducer =  (state, action) => {
                 actionTwo: action.val
         }
 
+        case "changeColorMode":
+            return{
+            ...state,
+                colorMode:action.val
+        }
+
         case "personSubmission":
 
             let newList = state.list;

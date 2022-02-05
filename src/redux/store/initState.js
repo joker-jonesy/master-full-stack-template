@@ -1,6 +1,7 @@
 export const initState={
     actionOne:"",
     actionTwo:"",
+    colorMode:"light",
     list:[
         {
             id:"fgdshjlsa",

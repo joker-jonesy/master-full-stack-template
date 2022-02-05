@@ -4,8 +4,7 @@ nav{
   left: 0;
   height: @navHeightMobile;
   width: 100%;
-  background-color: @mainl;
-  color: @fl1;
+
 
   .flexInit();
   .flexBetweenRow();
@@ -76,4 +75,36 @@ nav{
 
 
 
+}
+
+nav.light{
+  background-color: @mainl;
+  color: @fl1;
+
+  a{
+    color: @fl2;
+  }
+
+  .side-bar{
+    background-color: @minorl;
+    a{
+      color: @fl3;
+    }
+  }
+}
+
+nav.dark{
+  background-color: @maind;
+  color: @fd1;
+
+  a{
+    color: @fd2;
+  }
+
+  .side-bar{
+    background-color: @minord;
+    a{
+      color: @fd3;
+    }
+  }
 }

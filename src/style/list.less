@@ -2,7 +2,8 @@
   .pad(0 8px 8px 8px);
   .items{
     .flexInit();
-    .flexStartRow();
+    justify-content: space-around;
+    align-items: center;
 
     .item{
       background-color: @mainl;
@@ -17,9 +18,25 @@
       height: 200px;
       width: 100%;
       @media screen and(min-width: @mb1){
-        width: 300px;
+        width: 45%;
       }
-      box-shadow: #9b9b9b 2px 2px 2px;
+
     }
+  }
+}
+
+.list.light{
+  .item{
+    background-color: @mainl;
+    color: @fl1;
+    box-shadow: @sidel 2px 2px 2px;
+  }
+}
+
+.list.dark{
+  .item{
+    background-color: @maind;
+    color: @fd1;
+    box-shadow: @sided 2px 2px 2px;
   }
 }

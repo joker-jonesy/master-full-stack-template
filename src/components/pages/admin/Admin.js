@@ -50,7 +50,7 @@ function Admin(){
     }
 
     return(
-        <div className="admin">
+        <div className="admin page-wrapper">
             <label>Name</label>
             <input className={"textField"} value={form.name} onChange={changeValue("name")}/>
             {/*<TextInput  val={form.name} changed={changeValue("name")}/>*/}
