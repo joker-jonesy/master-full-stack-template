@@ -1,28 +1,36 @@
-import {Link, Outlet, useParams} from "react-router-dom";
+import {NavLink, Outlet, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 
-function ItemPage(){
 
-    const list = useSelector(state=>state.list);
-    const params =  useParams();
-    const itm = list.find(obj => obj.name.replace(/\s/g, '').toLowerCase()===params.itemId);
+function ItemPage() {
 
-    return(
+    const list = useSelector(state => state.list);
+    const params = useParams();
+    const itm = list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId);
+
+    return (
         <div className="item-page">
 
-            <h1>{itm===undefined&& "The Item you are looking for does not exist"}</h1>
+            {itm === undefined && <h1>The Item you are looking for does not exist</h1>}
 
-            {itm!==undefined && <div className="item-wrapper">
-                <h1>{itm!==undefined&&itm.name}</h1>
+            {itm !== undefined && <div className="item-wrapper">
+                <div className={"item-splash"}>
+                    <h1>{itm !== undefined && itm.name}</h1>
+                </div>
+
                 <div className="item-navigation">
-                    <Link to={"/list/"+params.itemId}>Main</Link>
-                    <Link to={"/list/"+params.itemId+"/descr"}>Description</Link>
+
+                    <NavLink activeClassName={"active"} to={"/list/" + params.itemId} end>Main</NavLink>
+                    <NavLink activeClassName={"active"} to={"/list/" + params.itemId + "/descr"}>Description</NavLink>
+
+
                 </div>
                 <div className="item-content">
-                    <Outlet/>
+                    <div className="content-wrapper">
+                        <Outlet/>
+                    </div>
                 </div>
             </div>}
-
 
 
         </div>

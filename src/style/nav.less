@@ -4,6 +4,8 @@ nav{
   left: 0;
   height: @navHeightMobile;
   width: 100%;
+  box-shadow: rgba(21,21,21,0.05) 6px 6px 6px;
+  z-index: 100;
 
 
   .flexInit();
@@ -47,7 +49,8 @@ nav{
     .flexStartColumn();
     position: fixed;
     top: @navHeightMobile;
-    height: 500%;
+    height: 500%;transition: 0.425s;
+
 
     background-color: @minorl;
     a{
