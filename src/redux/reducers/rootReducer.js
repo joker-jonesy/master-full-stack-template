@@ -14,9 +14,16 @@ const rootReducer =  (state, action) => {
         }
 
         case "changeColorMode":
+
+            const newToggle = !state.colorToggle;
+            const newTheme =  newToggle?"light":"dark"
+
+            document.body.style.backgroundColor=newToggle?"white":"black";
+
             return{
             ...state,
-                colorMode:action.val
+                colorToggle:newToggle,
+                colorMode: newTheme
         }
 
         case "personSubmission":

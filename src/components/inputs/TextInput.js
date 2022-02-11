@@ -3,12 +3,11 @@ import React from "react";
 function TextInput(props){
 
     const changed = event=>{
-
-        props.changed()
+        props.chg(event.target.value);
     }
 
     return(
-        <input className={"textField"} type="text" value={props.val} onChange={changed}/>
+        <input placeholder={"..."} className={"textField"} value={props.val} type="text" onChange={changed}/>
     )
 }
 

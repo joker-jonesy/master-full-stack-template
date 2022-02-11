@@ -8,9 +8,7 @@ function Button(props){
     const theme = useSelector(state=>state.colorMode)
 
     return(
-        <div className={"button "+theme} onClick={clickEvent}>
-            {props.message}
-        </div>
+        <input type={"submit"} className={"button "+theme} onClick={clickEvent} value={props.message}/>
     )
 }
 

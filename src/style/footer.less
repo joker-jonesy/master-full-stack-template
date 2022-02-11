@@ -2,10 +2,50 @@ footer{
   width: 100%;
   background-color: @mainl;
   color: @fl1;
-  height: 200px;
+  min-height: 200px;
   .pad(8px);
-  position: absolute;
-  bottom: 0;
+  //position: absolute;
+  //bottom: 0;
+  .flexInit();
+  .flexCenterRow();
+
+  .col-wrap{
+    .flexInit();
+    .flexCenterRow();
+  }
+
+  .foot-divider{
+    min-height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    .flexInit();
+    .flexCenterRow();
+
+    *{
+      margin-right: 8px;
+    }
+
+  }
+
+  .col{
+    width: 100%;
+    .flexInit();
+    .flexCenterColumn();
+
+    @media screen and (min-width: @mb1){
+      width: 200px;
+    }
+
+    ul{
+      .flexInit();
+      .flexCenterColumn();
+      padding: 0;
+    }
+
+    li{
+      list-style: none;
+    }
+  }
 }
 
 footer.light{

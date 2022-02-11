@@ -14,14 +14,14 @@ function ItemPage() {
             {itm === undefined && <h1>The Item you are looking for does not exist</h1>}
 
             {itm !== undefined && <div className="item-wrapper">
-                <div className={"item-splash"}>
+                <div className={"splash"}>
                     <h1>{itm !== undefined && itm.name}</h1>
                 </div>
 
                 <div className="item-navigation">
 
-                    <NavLink activeClassName={"active"} to={"/list/" + params.itemId} end>Main</NavLink>
-                    <NavLink activeClassName={"active"} to={"/list/" + params.itemId + "/descr"}>Description</NavLink>
+                    <NavLink activeclassname={"active"} to={"/list/" + params.itemId} end>Main</NavLink>
+                    <NavLink activeclassname={"active"} to={"/list/" + params.itemId + "/descr"}>Description</NavLink>
 
 
                 </div>

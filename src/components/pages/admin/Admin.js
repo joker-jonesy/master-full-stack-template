@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../inputs/Button";
 import {useDispatch} from "react-redux";
 import {personSubmission} from "../../../redux/actions/PersonSubmission";
-// import TextInput from "../../inputs/TextInput"
+import TextInput from "../../inputs/TextInput"
 
 function Admin(){
     const [form, setForm]=React.useState({
@@ -24,10 +24,10 @@ function Admin(){
         return result;
     }
 
-    const changeValue = prop => event=>{
+    const changeValue2 = prop => vl =>{
         setForm({
             ...form,
-            [prop]:event.target.value
+            [prop]:vl
         })
     }
 
@@ -51,14 +51,14 @@ function Admin(){
 
     return(
         <div className="admin page-wrapper">
-            <label>Name</label>
-            <input className={"textField"} value={form.name} onChange={changeValue("name")}/>
-            {/*<TextInput  val={form.name} changed={changeValue("name")}/>*/}
-            <label>Description</label>
-            <input className={"textField"} value={form.descr} onChange={changeValue("descr")}/>
-            {/*<TextInput  val={form.descr} changed={changeValue("descr")}/>*/}
-            <div className="validation">{vali}</div>
-            <Button message={"Submit"} click={()=>onSubmit()}/>
+            <div className="form-wrap">
+                <h3>Name</h3>
+                <TextInput  val={form.name} chg={changeValue2("name")}/>
+                <h3>Description</h3>
+                <TextInput  val={form.descr} chg={changeValue2("descr")}/>
+                <div className="validation">{vali}</div>
+                <Button message={"Submit"} click={()=>onSubmit()}/>
+            </div>
 
         </div>
     )

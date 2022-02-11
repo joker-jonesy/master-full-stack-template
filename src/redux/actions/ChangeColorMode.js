@@ -1,6 +1,5 @@
-export const ChangeColorMode= (vl) =>{
+export const ChangeColorMode= () =>{
     return{
-        type:"changeColorMode",
-        val: vl
+        type:"changeColorMode"
     }
 }

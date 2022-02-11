@@ -8,7 +8,6 @@ import {Provider} from "react-redux";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './icons/AwesomeLibrary';
 import Nav from "./components/nav/Nav";
-import Footer from "./components/footer/Footer";
 import Home from "./components/pages/Home";
 import List from "./components/pages/list/List";
 import Items from "./components/pages/list/Items";
@@ -36,7 +35,7 @@ ReactDOM.render(
                     </Route>
                     <Route path={"*"} element={<NotFound/>}/>
                 </Routes>
-                <Footer/>
+
                 </Provider>
             </BrowserRouter>
    ,

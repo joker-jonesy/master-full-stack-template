@@ -2,6 +2,7 @@ export const initState={
     actionOne:"",
     actionTwo:"",
     colorMode:"light",
+    colorToggle:true,
     list:[
         {
             id:"fgdshjlsa",
