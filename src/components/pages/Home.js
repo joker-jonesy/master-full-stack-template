@@ -13,7 +13,10 @@ function Home(){
     return (
         <div className="home page-wrapper">
             <div className="splash">
-                <h1>Home Page</h1>
+                <div className="cover">
+                    <h1>Home Page</h1>
+                </div>
+
             </div>
             <div className={"content-block"}>
                 <div className="block">
@@ -36,7 +39,9 @@ function Home(){
             <div className={"content-block column"}>
                 <div className="column">
                     <div className="block tall">
-                        <h1>Some Content</h1>
+                        <div className="cover">
+                            <h1>Cool Stuff</h1>
+                        </div>
                     </div>
                 </div>
                 <div className="column">

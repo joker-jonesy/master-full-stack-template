@@ -3,14 +3,14 @@
   margin: 0;
 }
 
-//text styling
-p, h1, h2, h3, h4, h5, h6, label {
-  margin-bottom: 16px;
+html{
   font-family: Roboto;
 }
 
-a{
-  font-family: Roboto;
+//text styling
+p, h1, h2, h3, h4, h5, h6, label {
+  margin-bottom: 16px;
+
 }
 
 //core wrapper styling
@@ -27,7 +27,6 @@ a{
 }
 
 #App {
-  .pad(8px 0 0 0);
   width: 100%;
   .flexInit();
   flex-direction: column;
@@ -90,7 +89,6 @@ a {
     min-height: 250px;
     box-sizing: border-box;
     border: 1px solid black;
-    .pad(8px);
 
     @media screen and (min-width: @mb1) {
       width: 50%;
@@ -99,8 +97,18 @@ a {
     .flexInit();
     .flexCenterColumn();
 
+    background-size: cover;
+    background-position: center;
+
+    .cover{
+      min-height: 250px;
+    }
+
     &.tall {
       min-height: 500px;
+      .cover{
+        min-height: 500px;
+      }
     }
   }
 }
@@ -132,6 +140,8 @@ a {
   .flexInit();
   .flexCenterRow();
 }
+
+
 
 //colors based on theme
 .light {

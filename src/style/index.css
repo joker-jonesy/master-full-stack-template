@@ -55,11 +55,11 @@
   flex-direction: column;
 }
 .button {
-  height: 30px;
-  min-width: 60px;
+  height: 50px;
+  min-width: 110px;
   box-sizing: border-box;
   padding: 4px;
-  border-radius: 10px;
+  border-radius: 50px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -68,7 +68,18 @@
   cursor: pointer;
   transition: 0.125s;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  font-size: 21px;
   border: none;
+}
+@media screen and (min-width: 600px) {
+  .button {
+    height: 30px;
+    min-width: 60px;
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 14px;
+  }
 }
 .button:focus {
   outline: none;
@@ -376,6 +387,9 @@ footer.dark {
 * {
   margin: 0;
 }
+html {
+  font-family: Roboto;
+}
 p,
 h1,
 h2,
@@ -385,10 +399,6 @@ h5,
 h6,
 label {
   margin-bottom: 16px;
-  font-family: Roboto;
-}
-a {
-  font-family: Roboto;
 }
 #root {
   box-sizing: border-box;
@@ -402,8 +412,6 @@ a {
   }
 }
 #App {
-  box-sizing: border-box;
-  padding: 8px 0 0 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -468,21 +476,28 @@ a {
 .content-block .block {
   width: 100%;
   min-height: 250px;
-  border: 1px solid black;
   box-sizing: border-box;
-  padding: 8px;
+  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (min-width: 600px) {
   .content-block .block {
     width: 50%;
   }
 }
+.content-block .block .cover {
+  min-height: 250px;
+}
 .content-block .block.tall {
+  min-height: 500px;
+}
+.content-block .block.tall .cover {
   min-height: 500px;
 }
 .divider {
@@ -548,6 +563,18 @@ a {
 .dark .divider {
   background-color: #cccccc;
   color: #000000;
+}
+.home .splash {
+  background-image: url("../assets/images/home.png");
+}
+.home .splash .cover {
+  background-color: rgba(155, 155, 155, 0.8);
+}
+.home .tall {
+  background-image: url("../assets/images/homCt.png");
+}
+.home .tall .cover {
+  background-color: rgba(155, 155, 155, 0.8);
 }
 .list .items {
   display: flex;
