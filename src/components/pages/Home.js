@@ -17,6 +17,7 @@ function Home(){
             </div>
             <div className={"content-block"}>
                 <div className="block">
+                    <h3>Toggle Me to change your color theme</h3>
                     <Toggle toggled={()=>dispatch(ChangeColorMode())}/>
                 </div>
                 <div className="block">

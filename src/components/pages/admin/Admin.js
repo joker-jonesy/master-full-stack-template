@@ -50,8 +50,9 @@ function Admin(){
     }
 
     return(
-        <div className="admin page-wrapper">
+        <div className="admin page-wrapper center">
             <div className="form-wrap">
+                <h1>Add List Item</h1>
                 <h3>Name</h3>
                 <TextInput  val={form.name} chg={changeValue2("name")}/>
                 <h3>Description</h3>

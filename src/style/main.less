@@ -1,12 +1,19 @@
+//margin clear
 * {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, label {
+//text styling
+p, h1, h2, h3, h4, h5, h6, label {
   margin-bottom: 16px;
+  font-family: Roboto;
 }
 
+a{
+  font-family: Roboto;
+}
 
+//core wrapper styling
 #root {
   box-sizing: border-box;
   padding-top: @navHeightMobile;
@@ -47,9 +54,14 @@ a {
   width: 100%;
   .flexInit();
   .flexStartColumn();
-  height: 100%;
+
+  &.center{
+    .flexCenterColumn();
+  }
+  min-height: 100vh;
 }
 
+//core content filler eleemnts
 .content-block {
   width: 100%;
   .flexInit();
@@ -85,7 +97,7 @@ a {
     }
 
     .flexInit();
-    .flexCenterRow();
+    .flexCenterColumn();
 
     &.tall {
       min-height: 500px;
@@ -113,6 +125,7 @@ a {
   background-position: center;
 }
 
+//cover is used to go over any block or splash with a background color
 .cover {
   height: 100%;
   width: 100%;
@@ -120,6 +133,7 @@ a {
   .flexCenterRow();
 }
 
+//colors based on theme
 .light {
   .content-block {
     background-color: @mainl;

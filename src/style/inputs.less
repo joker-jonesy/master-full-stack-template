@@ -1,3 +1,5 @@
+//style for buttons
+
 .button{
   height: 30px;
   min-width: 60px;
@@ -11,6 +13,8 @@
 
   border: none;
 
+  //when button is being highlight
+
   &:focus{
     outline: none;
     &.light{
@@ -21,6 +25,8 @@
       background-color: @tintd;
     }
   }
+
+  //theming based on color scheme
 
   &.light{
     background-color: @minorl;
@@ -39,6 +45,8 @@
   }
 }
 
+//toggle input styling
+
 .toggle{
   width: 80px;
   height: 40px;
@@ -47,6 +55,8 @@
   transition: 0.225s;
   cursor: pointer;
   position: relative;
+
+  //individual circle within toggle
 
   .circle{
     height: 35px;
@@ -68,6 +78,8 @@
 
 }
 
+//text input field styling
+
 .textField{
   border: none;
   height: 35px;
@@ -83,6 +95,8 @@
     border: black 1px solid;
   }
 }
+
+//wrapper for form related needs
 
 .form-wrap{
   width: 100%;
@@ -102,11 +116,21 @@
     margin-bottom: 16px;
   }
 
-  .validation{
+  //validation container for your form
 
+  .validation{
+    .warning{
+      color: @warn;
+    }
+
+    .success{
+      color: @good;
+    }
   }
 
 }
+
+//colros based on theme
 
 .light{
   .toggle{

@@ -1,4 +1,6 @@
 footer{
+  //initialize footer styling
+
   width: 100%;
   background-color: @mainl;
   color: @fl1;
@@ -9,11 +11,13 @@ footer{
   .flexInit();
   .flexCenterRow();
 
+  //wrapper for footer .col
   .col-wrap{
     .flexInit();
     .flexCenterRow();
   }
 
+  //footer dividers
   .foot-divider{
     min-height: 100px;
     width: 100%;
@@ -26,6 +30,8 @@ footer{
     }
 
   }
+
+  //individual columns in footer
 
   .col{
     width: 100%;
@@ -48,6 +54,7 @@ footer{
   }
 }
 
+//styling for color themes
 footer.light{
   background-color: @mainl;
   color: @fl1;
