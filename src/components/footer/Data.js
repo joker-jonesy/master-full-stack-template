@@ -4,6 +4,7 @@ export const footer= {
             name:"Headline 1",
             items:[
                 {
+                    name:"Item 1",
                     link:"https://www.w3schools.com/howto/howto_js_remove_class.asp"
                 },
                 {
