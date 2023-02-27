@@ -1,7 +1,7 @@
-function ContentContainer(){
+function ContentContainer(props){
     return(
-        <div className={"content-container"}>
-            Content Container
+        <div className={"content-block"}>
+            {props.content}
         </div>
     )
 }

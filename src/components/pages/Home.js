@@ -1,62 +1,37 @@
 import React from "react";
-import Toggle from "../inputs/Toggle";
-import {useDispatch} from "react-redux";
-import {ChangeColorMode} from "../../redux/actions/ChangeColorMode";
+import ContentBlock from "../main/ContentBlock";
+import ContentContainer from "../main/ContentContainer";
+import Divider from "../main/Divider";
+import ColumnBlock from "../main/ColumnBlock";
+import Splash from "../main/Splash";
+import ContentContainerColumn from "../main/ContentContainerColumn";
 
 
 function Home(){
 
-    const dispatch=useDispatch();
-
-
-
     return (
         <div className="home page-wrapper">
-            <div className="splash">
-                <div className="cover">
-                    <h1>Home Page</h1>
-                </div>
-
-            </div>
-            <div className={"content-block"}>
-                <div className="block">
-                    <h3>Toggle Me to change your color theme</h3>
-                    <Toggle toggled={()=>dispatch(ChangeColorMode())}/>
-                </div>
-                <div className="block">
-                    <h1>Some Content</h1>
-                </div>
-                <div className="block">
-                    <h1>Some Content</h1>
-                </div>
-                <div className="block">
-                    <h1>Some Content</h1>
-                </div>
-            </div>
-            <div className="divider">
-                <h1>Divider</h1>
-            </div>
-            <div className={"content-block column"}>
-                <div className="column">
-                    <div className="block tall">
-                        <div className="cover">
-                            <h1>Cool Stuff</h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="column">
-                    <div className="block">
-                        <h1>More Content</h1>
-                    </div>
-                    <div className="block">
-                        <h1>Some Content</h1>
-                    </div>
-                </div>
+            <Splash content={"Welcome Back"}/>
+            <ContentContainer content={
+                <>
+                    <ContentBlock/>
+                    <ContentBlock/>
+                    <ContentBlock/>
+                    <ContentBlock/>
+                    <ContentBlock/>
+                    <ContentBlock/>
+                </>
+            }/>
 
 
+            <Divider/>
+            <ContentContainerColumn content={
+                <>
+                    <ColumnBlock/>
+                    <ColumnBlock/>
+                </>
+            }/>
 
-
-            </div>
 
 
 

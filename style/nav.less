@@ -48,34 +48,7 @@ nav{
     }
   }
 
-  //mobile navigation menu
-  .side-bar{
-    .flexInit();
-    .flexStartColumn();
-    position: fixed;
-    top: @navHeightMobile;
-    height: 500%;transition: 0.425s;
 
-
-    background-color: @minorl;
-    a{
-      color: @fl3;
-      .flexInit();
-      .flexCenterRow();
-      height: 60px;
-    }
-
-    width: 100%;
-
-
-    @media screen and (min-width: @mb1){
-      width: 300px;
-    }
-
-    @media screen and (min-width: @mb2){
-      display: none;
-    }
-  }
 
   .active{
     text-decoration: underline;
@@ -86,7 +59,7 @@ nav{
 }
 
 //nav color themeings
-nav.light{
+.light nav {
   background-color: @mainl;
   color: @fl1;
 
@@ -102,7 +75,7 @@ nav.light{
   }
 }
 
-nav.dark{
+.dark nav{
   background-color: @maind;
   color: @fd1;
 
@@ -115,5 +88,34 @@ nav.dark{
     a{
       color: @fd3;
     }
+  }
+}
+
+//mobile navigation menu
+.side-bar{
+  .flexInit();
+  .flexStartColumn();
+  position: fixed;
+  z-index: 97;
+  top: @navHeightMobile;
+  height: 100vh;
+  transition: 0.425s;
+  background-color: @minorl;
+  a{
+    color: @fl3;
+    .flexInit();
+    .flexCenterRow();
+    height: 60px;
+  }
+
+  width: 100%;
+
+
+  @media screen and (min-width: @mb1){
+    width: 300px;
+  }
+
+  @media screen and (min-width: @mb2){
+    display: none;
   }
 }

@@ -1,7 +1,7 @@
-function Divider(){
+function Divider(props){
     return(
         <div className={"divider"}>
-            Divider Content
+            {props.content}
         </div>
     )
 }

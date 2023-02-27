@@ -1,18 +1,9 @@
 export const initState={
-    actionOne:"",
-    actionTwo:"",
-    colorMode:"light",
-    colorToggle:true,
     list:[
         {
             id:"fgdshjlsa",
             name:"Henry Jones",
             descr:"The world's greatest rebel, and part time spaceman."
-        },
-        {
-            id:"asdhakjjasd",
-            name:"Kit Katcher",
-            descr:"The dark Shaman who cuddles her corgi while watching anime."
         },
         {
             id:"lkssnsslfdkgjr",

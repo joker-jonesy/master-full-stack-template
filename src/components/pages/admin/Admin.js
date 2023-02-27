@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../inputs/Button";
 import {useDispatch} from "react-redux";
-import {personSubmission} from "../../../redux/actions/PersonSubmission";
+import {personSubmission} from "../../../reducers/listSlice";
 import TextInput from "../../inputs/TextInput"
 
 function Admin(){

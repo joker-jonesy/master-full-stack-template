@@ -1,7 +1,10 @@
-function ContentBlock(){
+import Toggle from "../inputs/Toggle";
+
+function ContentBlock(props){
     return(
-        <div className={"content-block"}>
-            Content Block
+        <div className={"block"}>
+            {props.content}
+            <Toggle/>
         </div>
     )
 }

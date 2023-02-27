@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../public/assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 .flexInit {
   display: flex;
@@ -84,26 +84,6 @@
 .button:focus {
   outline: none;
 }
-.button:focus.light {
-  background-color: #696969;
-}
-.button:focus.dark {
-  background-color: #797979;
-}
-.button.light {
-  background-color: #9b9b9b;
-  color: white;
-}
-.button.light:hover {
-  background-color: #696969;
-}
-.button.dark {
-  background-color: #444444;
-  color: white;
-}
-.button.dark:hover {
-  background-color: #797979;
-}
 .toggle {
   width: 80px;
   height: 40px;
@@ -176,6 +156,13 @@
 .form-wrap .validation .success {
   color: green;
 }
+.light .button {
+  background-color: #9b9b9b;
+  color: white;
+}
+.light .button:hover {
+  background-color: #696969;
+}
 .light .toggle {
   background-color: #9b9b9b;
 }
@@ -187,6 +174,13 @@
 }
 .light .form-wrap {
   background-color: #efefef;
+}
+.dark .button {
+  background-color: #444444;
+  color: #151515;
+}
+.dark .button:hover {
+  background-color: #797979;
 }
 .dark .toggle {
   background-color: #444444;
@@ -258,20 +252,50 @@ nav .drop-down {
     display: none;
   }
 }
-nav .side-bar {
+nav .active {
+  text-decoration: underline;
+}
+.light nav {
+  background-color: #efefef;
+  color: #000000;
+}
+.light nav a {
+  color: #151515;
+}
+.light nav .side-bar {
+  background-color: #9b9b9b;
+}
+.light nav .side-bar a {
+  color: white;
+}
+.dark nav {
+  background-color: #151515;
+  color: white;
+}
+.dark nav a {
+  color: #d5d5d5;
+}
+.dark nav .side-bar {
+  background-color: #444444;
+}
+.dark nav .side-bar a {
+  color: #000000;
+}
+.side-bar {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: fixed;
+  z-index: 97;
   top: 80px;
-  height: 500%;
+  height: 100vh;
   transition: 0.425s;
   background-color: #9b9b9b;
   width: 100%;
 }
-nav .side-bar a {
+.side-bar a {
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -281,43 +305,14 @@ nav .side-bar a {
   height: 60px;
 }
 @media screen and (min-width: 600px) {
-  nav .side-bar {
+  .side-bar {
     width: 300px;
   }
 }
 @media screen and (min-width: 900px) {
-  nav .side-bar {
+  .side-bar {
     display: none;
   }
-}
-nav .active {
-  text-decoration: underline;
-}
-nav.light {
-  background-color: #efefef;
-  color: #000000;
-}
-nav.light a {
-  color: #151515;
-}
-nav.light .side-bar {
-  background-color: #9b9b9b;
-}
-nav.light .side-bar a {
-  color: white;
-}
-nav.dark {
-  background-color: #151515;
-  color: white;
-}
-nav.dark a {
-  color: #d5d5d5;
-}
-nav.dark .side-bar {
-  background-color: #444444;
-}
-nav.dark .side-bar a {
-  color: #000000;
 }
 footer {
   width: 100%;
@@ -376,11 +371,11 @@ footer .col ul {
 footer .col li {
   list-style: none;
 }
-footer.light {
+.light footer {
   background-color: #efefef;
   color: #000000;
 }
-footer.dark {
+.dark footer {
   background-color: #151515;
   color: white;
 }
@@ -429,6 +424,7 @@ label {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 .page-wrapper {
   width: 100%;
@@ -565,13 +561,13 @@ a {
   color: #000000;
 }
 .home .splash {
-  background-image: url("../assets/images/home.png");
+  background-image: url("/assets/images/home.png");
 }
 .home .splash .cover {
   background-color: rgba(155, 155, 155, 0.8);
 }
 .home .tall {
-  background-image: url("../assets/images/homCt.png");
+  background-image: url("/assets/images/homCt.png");
 }
 .home .tall .cover {
   background-color: rgba(155, 155, 155, 0.8);
@@ -640,34 +636,33 @@ a {
   justify-content: center;
   align-items: center;
 }
-.list.light .item {
+.light .list .item {
   background-color: #efefef;
   color: #000000;
   box-shadow: #cccccc 2px 2px 2px;
 }
-.list.light .item-navigation {
+.light .list .item-navigation {
   background-color: #efefef;
   color: #000000;
 }
-.list.light .item-navigation a {
+.light .list .item-navigation a {
   color: #151515;
 }
-.list.light .item-navigation .active {
+.light .list .item-navigation .active {
   background-color: #cccccc;
 }
-.list.dark .item {
+.dark .list .item {
   background-color: #151515;
   color: white;
   box-shadow: #262626 2px 2px 2px;
 }
-.list.dark .item-navigation {
+.dark .list .item-navigation {
   background-color: #151515;
   color: white;
 }
-.list.dark .item-navigation a {
+.dark .list .item-navigation a {
   color: #d5d5d5;
 }
-.list.dark .item-navigation .active {
+.dark .list .item-navigation .active {
   background-color: #262626;
 }
-/*# sourceMappingURL=index.css.map */

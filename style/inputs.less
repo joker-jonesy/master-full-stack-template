@@ -26,31 +26,6 @@
 
   &:focus{
     outline: none;
-    &.light{
-      background-color: @tintl;
-    }
-
-    &.dark{
-      background-color: @tintd;
-    }
-  }
-
-  //theming based on color scheme
-
-  &.light{
-    background-color: @minorl;
-    color: @fl3;
-    &:hover{
-      background-color: @tintl;
-    }
-  }
-
-  &.dark{
-    background-color: @minord;
-    color: @fl3;
-    &:hover{
-      background-color: @tintd;
-    }
   }
 }
 
@@ -139,9 +114,19 @@
 
 }
 
-//colros based on theme
+//colors based on theme
 
 .light{
+
+  .button{
+
+    background-color: @minorl;
+    color: @fl3;
+    &:hover{
+      background-color: @tintl;
+    }
+  }
+
   .toggle{
     background-color: @minorl;
     .circle{
@@ -159,6 +144,14 @@
 }
 
 .dark{
+  .button{
+    background-color: @minord;
+    color: @fl2;
+    &:hover{
+      background-color: @tintd;
+    }
+  }
+
   .toggle{
     background-color: @minord;
     .circle{
