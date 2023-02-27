@@ -46,11 +46,13 @@ footer{
       .flexInit();
       .flexCenterColumn();
       padding: 0;
+
+      a:hover{
+        text-decoration: underline;
+      }
     }
 
-    li{
-      list-style: none;
-    }
+
   }
 }
 
@@ -58,9 +60,17 @@ footer{
 .light footer{
   background-color: @mainl;
   color: @fl1;
+
+  a{
+    color: @fl1;
+  }
 }
 
 .dark footer{
   background-color: @maind;
   color: @fd1;
+
+  a{
+    color: @fd1;
+  }
 }

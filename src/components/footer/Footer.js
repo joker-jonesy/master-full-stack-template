@@ -1,50 +1,29 @@
 // import {Link} from "react-router-dom";
-
+import {footer} from "./Data";
+import {Link} from "react-router-dom";
 
 function Footer() {
     return (
         <footer>
 
             <div className="col-wrap">
-                <div className="col">
-                    <h3>Headline 1</h3>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 1</li>
-                        <li>Item 1</li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h3>Headline 1</h3>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h3>Headline 2</h3>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h3>Headline 3</h3>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
+
+                {footer.headlines.map((itm, idx)=>
+                    <div className="col">
+                        <h3>{itm.name}</h3>
+                        <ul>
+                            {itm.items.map((it, id)=>
+                            <Link key={id} to={it.link}>{it.name}</Link>
+                            )}
+                        </ul>
+                    </div>
+                )}
             </div>
 
             <div className="foot-divider">
-                <h3>Item 1 |</h3>
-                <h3>Item 2 |</h3>
-                <h3>Item 3 |</h3>
-                <h3>Item 4</h3>
+                {footer.bottom.map((itm,idx)=>
+                    <Link key={idx} to={itm.link}>{itm.name}</Link>
+                )}
             </div>
 
 

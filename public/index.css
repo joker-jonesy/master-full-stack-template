@@ -368,15 +368,21 @@ footer .col ul {
   align-items: center;
   padding: 0;
 }
-footer .col li {
-  list-style: none;
+footer .col ul a:hover {
+  text-decoration: underline;
 }
 .light footer {
   background-color: #efefef;
   color: #000000;
 }
+.light footer a {
+  color: #000000;
+}
 .dark footer {
   background-color: #151515;
+  color: white;
+}
+.dark footer a {
   color: white;
 }
 * {
@@ -394,6 +400,9 @@ h5,
 h6,
 label {
   margin-bottom: 16px;
+}
+a {
+  text-decoration: none;
 }
 #root {
   box-sizing: border-box;
