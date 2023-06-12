@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../public/assets/fonts/Roboto/Roboto-Regular.ttf");
+  src: url("Roboto-Regular.ttf");
 }
 .flexInit {
   display: flex;
@@ -222,6 +222,9 @@ nav .logo {
   height: 100%;
   width: 80px;
 }
+nav .logo img {
+  height: 100%;
+}
 nav .link-wrapper {
   display: none;
   flex-direction: row;
@@ -442,6 +445,8 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  box-sizing: border-box;
+  padding: 10px 0 10px 0;
   min-height: 100vh;
 }
 .page-wrapper.center {
@@ -516,6 +521,8 @@ a {
 }
 .content-wrapper {
   max-width: 900px;
+  box-sizing: border-box;
+  padding: 10px;
 }
 .splash {
   width: 100%;
@@ -542,12 +549,6 @@ a {
 }
 .light .content-block .block:nth-child(3n+1) {
   background-color: #cccccc;
-}
-.light .content-block .column:nth-child(2) .block {
-  background-color: #efefef;
-}
-.light .content-block .column:nth-child(2) .block:nth-child(2) {
-  background-color: #9b9b9b;
 }
 .light .divider {
   background-color: #262626;

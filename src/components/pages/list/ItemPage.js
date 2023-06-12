@@ -1,3 +1,4 @@
+import React from "react";
 import {NavLink, Outlet, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 
@@ -6,7 +7,11 @@ function ItemPage() {
 
     const list = useSelector(state => state.list);
     const params = useParams();
-    const itm = list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId);
+    const [itm, setItem]=React.useState(list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId))
+
+    React.useEffect(()=>{
+        setItem(list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId))
+        },[params,list])
 
     return (
         <div className="item-page">

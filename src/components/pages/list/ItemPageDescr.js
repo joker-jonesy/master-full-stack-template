@@ -9,7 +9,9 @@ function ItemPageDescr(){
 
     return(
         <div className="item-page-descr">
-            <p>{itm.descr}</p>
+            {itm.descr.split(/\r?\n/).map((itm,idx)=>
+                <p key={idx}>{itm}</p>
+            )}
         </div>
     )
 }

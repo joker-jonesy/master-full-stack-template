@@ -9,7 +9,7 @@ function Footer() {
             <div className="col-wrap">
 
                 {footer.headlines.map((itm, idx)=>
-                    <div className="col">
+                    <div className="col" key={idx}>
                         <h3>{itm.name}</h3>
                         <ul>
                             {itm.items.map((it, id)=>
@@ -25,6 +25,8 @@ function Footer() {
                     <Link key={idx} to={itm.link}>{itm.name}</Link>
                 )}
             </div>
+
+            <h3> {footer.line}</h3>
 
 
         </footer>

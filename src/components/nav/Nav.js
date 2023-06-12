@@ -1,5 +1,5 @@
 import React from "react";
-
+import {data} from "./Data";
 import {Link, NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SideMenu from "./SideMenu";
@@ -11,12 +11,14 @@ function Nav() {
     return (
         <>
             <nav>
-                <Link className={"logo"} to={"/"}>Logo</Link>
+                <Link className={"logo"} to={"/"}>
+                    <img src={data.logo.img} alt={data.logo.alt}/>
+                </Link>
 
                 <div className="link-wrapper">
-                    <NavLink to={"/"} activeclassname={"active"}>Home</NavLink>
-                    <NavLink to={"/list"} activeclassname={"active"}>List</NavLink>
-                    <NavLink to={"/admin"} activeclassname={"active"}>Admin</NavLink>
+                    {data.links.map((itm, idx)=>
+                        <NavLink key={idx} to={itm.path} activeclassname={"active"}>{itm.name}</NavLink>
+                    )}
                 </div>
                 <div className={"drop-down"} onClick={() => setToggle(!toggle)}>
                     <FontAwesomeIcon icon={"bars"} size={"2x"}/>

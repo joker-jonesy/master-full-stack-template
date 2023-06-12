@@ -1,15 +1,20 @@
+import {useSelector} from "react-redux";
+import {useParams} from "react-router-dom";
+import React from "react";
+
 function ItemPageMain(){
+
+    const list = useSelector(state => state.list);
+    const params = useParams();
+    const [itm, setItem]=React.useState(list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId))
+
+    React.useEffect(()=>{
+        setItem(list.find(obj => obj.name.replace(/\s/g, '').toLowerCase() === params.itemId))
+    },[params,list])
+
     return(
         <div className="item-page-descr">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorem doloribus excepturi exercitationem explicabo, harum id ipsa laborum libero minus mollitia nesciunt odio omnis quos recusandae sed suscipit ullam, voluptatum.</p>
+            {itm.story}
         </div>
     )
 }

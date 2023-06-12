@@ -57,6 +57,7 @@ a {
   width: 100%;
   .flexInit();
   .flexStartColumn();
+  .pad(10px 0 10px 0);
 
   &.center{
     .flexCenterColumn();
@@ -126,6 +127,7 @@ a {
 
 .content-wrapper {
   max-width: @mb2;
+  .pad(10px)
 }
 
 .splash {
@@ -154,16 +156,6 @@ a {
 
     .block:nth-child(3n+1) {
       background-color: @sidel;
-    }
-
-    .column:nth-child(2){
-      .block{
-        background-color: @mainl;
-      }
-
-      .block:nth-child(2){
-        background-color: @minorl;
-      }
     }
 
   }

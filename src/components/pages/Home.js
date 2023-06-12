@@ -5,19 +5,23 @@ import Divider from "../main/Divider";
 import ColumnBlock from "../main/ColumnBlock";
 import Splash from "../main/Splash";
 import ContentContainerColumn from "../main/ContentContainerColumn";
-
+import {data} from "./Data";
 
 function Home(){
 
     return (
         <div className="home page-wrapper">
-            <Splash content={"Welcome Back"}/>
+            <Splash content={data.home.tagline}/>
             <ContentContainer content={
                 <>
                     <ContentBlock/>
                     <ContentBlock/>
                     <ContentBlock/>
                     <ContentBlock/>
+                </>
+            }/>
+            <ContentContainer content={
+                <>
                     <ContentBlock/>
                     <ContentBlock/>
                 </>

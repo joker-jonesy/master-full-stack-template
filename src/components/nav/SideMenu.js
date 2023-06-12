@@ -1,6 +1,7 @@
 
 import {Link} from "react-router-dom";
 import React from "react";
+import {data} from "./Data";
 
 function SideMenu(props){
 
@@ -15,9 +16,9 @@ function SideMenu(props){
 
     return(
         <div className="side-bar" style={style}>
-            <Link to={"/"} onClick={() => props.setToggle(!props.toggle)}>Home</Link>
-            <Link to={"/list"} onClick={() => props.setToggle(!props.toggle)}>List</Link>
-            <Link to={"/admin"} onClick={() => props.setToggle(!props.toggle)}>Admin</Link>
+            {data.links.map((itm, idx)=>
+                <Link key={idx} to={itm.path} onClick={() => props.setToggle(!props.toggle)}>{itm.name}</Link>
+            )}
         </div>
     )
 }
